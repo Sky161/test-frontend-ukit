@@ -3,8 +3,8 @@
 // @Author: Andrey Chechkin
 // @Date:   2017-01-03T18:34:34+03:00
 // @Email:  andrey.chechkin@me.com
-// @Last modified by:   Andrey Chechkin
-// @Last modified time: 2017-01-03T18:43:06+03:00
+// @Last modified by:   andrey_chechkin
+// @Last modified time: 2017-01-04T13:57:06+03:00
 
 // Core variables and mixins
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/variables"
@@ -16,6 +16,8 @@
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/glyphicons"
 
 // Core CSS
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/scaffolding"
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/type"
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/grid"
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/tables"
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/forms"
@@ -28,3 +30,12 @@
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/input-groups"
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/navs"
 @import "~bootstrap-sass/assets/stylesheets/bootstrap/navbar"
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/panels"
+
+//custom
+html
+	body
+		main
+			padding-bottom: 50px
+		@import "header"
+		@import "footer"
