@@ -1,0 +1,29 @@
+{
+  "name": "test-ukit-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "public/index.html",
+  "scripts": {
+    "webpack": "./node_modules/.bin/webpack",
+    "dev": "./node_modules/.bin/webpack-dev-server  -d --open --watch",
+    "postinstall": "npm run webpack"
+  },
+  "author": "Andrey Chechkin",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "css-loader": "^0.26.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "node-sass": "^4.1.1",
+    "resolve-url-loader": "^1.6.0",
+    "sass-loader": "^4.0.2",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}
