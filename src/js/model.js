@@ -5,7 +5,7 @@
 * @Date:   2017-01-05T11:33:18+03:00
 * @Email:  andrey.chechkin@me.com
 * @Last modified by:   andrey_chechkin
-* @Last modified time: 2017-01-05T11:58:39+03:00
+* @Last modified time: 2017-01-08T21:24:52+03:00
 */
 
 const DATA = [{
@@ -77,6 +77,12 @@ class Model {
 
 	getDataArr() {
 		return this.data;
+	}
+
+	deleteItem(id) {
+		this.data = this.data.filter(item => {
+			return item.id != id;
+		});
 	}
 }
 
