@@ -4,8 +4,8 @@
 * @Author: Andrey Chechkin
 * @Date:   2017-01-05T11:45:43+03:00
 * @Email:  andrey.chechkin@me.com
-* @Last modified by:   andrey_chechkin
-* @Last modified time: 2017-01-08T21:20:22+03:00
+* @Last modified by:   Andrey Chechkin
+* @Last modified time: 2017-01-09T17:34:29+03:00
 */
 
 class View {
@@ -34,7 +34,7 @@ class View {
 	}
 
 	render(selector, html) {
-		document.body.querySelector(selector).innerHTML = html;
+		document.body.querySelector(selector).innerHTML += html;
 	}
 
 	deleteItem(item) {

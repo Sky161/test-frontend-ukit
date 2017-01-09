@@ -4,8 +4,8 @@
 * @Author: Andrey Chechkin
 * @Date:   2017-01-03T18:08:28+03:00
 * @Email:  andrey.chechkin@me.com
-* @Last modified by:   andrey_chechkin
-* @Last modified time: 2017-01-08T21:25:22+03:00
+* @Last modified by:   Andrey Chechkin
+* @Last modified time: 2017-01-09T17:46:20+03:00
 */
 
 import styles from "../sass/main.sass";
@@ -14,7 +14,10 @@ import Controller from "./controller.js";
 document.addEventListener("DOMContentLoaded", () => {
 	Controller.init();
 
-	const listBookSelector = document.body.querySelector("#list-book");
+	const mainSelector = document.body.querySelector("main");
+	const listBookSelector = mainSelector.querySelector("#list-book");
+	const formSelector = mainSelector.querySelector("#add-book");
+
 	listBookSelector.addEventListener("click", e => {
 		const panelBlock = e.target.closest(".panel-default");
 		if(e.target.classList.contains("btn-danger")) {
@@ -22,4 +25,22 @@ document.addEventListener("DOMContentLoaded", () => {
 			Controller.deleteItem(panelBlock);
 		}
 	});
+
+	formSelector.addEventListener("submit", e => {
+		e.preventDefault();
+		const res = {};
+		res["id"] = Controller.getLengthData() + 1;
+
+		for (let i = 0; i < formSelector.elements.length; i++) {
+			const name = formSelector.elements[i].name;
+			const val = formSelector.elements[i].value;
+			if(name) {
+				res[name] = val;
+			}
+		}
+
+		Controller.addItem(res);
+		formSelector.reset();
+	});
+
 });
