@@ -5,7 +5,7 @@
 * @Date:   2017-01-05T11:45:43+03:00
 * @Email:  andrey.chechkin@me.com
 * @Last modified by:   Andrey Chechkin
-* @Last modified time: 2017-01-09T17:34:29+03:00
+* @Last modified time: 2017-01-11T11:10:30+03:00
 */
 
 class View {
@@ -39,6 +39,14 @@ class View {
 
 	deleteItem(item) {
 		item.remove();
+	}
+
+	pushFormData(form, data) {
+		for (let i = 0; i < form.elements.length; i++) {
+			if(form[i].type !== "submit"){
+				form[i].value = data[form[i].name];
+			}
+		}
 	}
 }
 

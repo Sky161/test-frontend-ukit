@@ -5,7 +5,7 @@
 * @Date:   2017-01-05T11:45:35+03:00
 * @Email:  andrey.chechkin@me.com
 * @Last modified by:   Andrey Chechkin
-* @Last modified time: 2017-01-09T17:43:41+03:00
+* @Last modified time: 2017-01-11T11:06:01+03:00
 */
 
 import Model from "./model.js";
@@ -33,6 +33,11 @@ class Controller {
 
 	getLengthData() {
 		return Model.data.length;
+	}
+
+	transferDataForm(form, item) {
+		const id = item.dataset.id;
+		View.pushFormData(form, Model.getItemById(id));
 	}
 }
 

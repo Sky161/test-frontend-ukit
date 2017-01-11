@@ -5,7 +5,7 @@
 * @Date:   2017-01-03T18:08:28+03:00
 * @Email:  andrey.chechkin@me.com
 * @Last modified by:   Andrey Chechkin
-* @Last modified time: 2017-01-09T17:46:20+03:00
+* @Last modified time: 2017-01-11T11:05:41+03:00
 */
 
 import styles from "../sass/main.sass";
@@ -21,8 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	listBookSelector.addEventListener("click", e => {
 		const panelBlock = e.target.closest(".panel-default");
 		if(e.target.classList.contains("btn-danger")) {
-			e.preventDefault();
 			Controller.deleteItem(panelBlock);
+		} else if(e.target.classList.contains("btn-primary")) {
+			Controller.transferDataForm(formSelector, panelBlock);
 		}
 	});
 
