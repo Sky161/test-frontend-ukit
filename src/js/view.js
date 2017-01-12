@@ -5,7 +5,7 @@
 * @Date:   2017-01-05T11:45:43+03:00
 * @Email:  andrey.chechkin@me.com
 * @Last modified by:   Andrey Chechkin
-* @Last modified time: 2017-01-11T11:10:30+03:00
+* @Last modified time: 2017-01-12T11:55:32+03:00
 */
 
 class View {
@@ -33,8 +33,12 @@ class View {
 		return res;
 	}
 
-	render(selector, html) {
-		document.body.querySelector(selector).innerHTML += html;
+	render(selector, html, replace) {
+		if(replace) {
+			document.body.querySelector(selector).innerHTML = html;
+		} else {
+			document.body.querySelector(selector).innerHTML += html;
+		}
 	}
 
 	deleteItem(item) {

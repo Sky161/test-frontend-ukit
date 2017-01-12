@@ -5,7 +5,7 @@
 * @Date:   2017-01-05T11:33:18+03:00
 * @Email:  andrey.chechkin@me.com
 * @Last modified by:   Andrey Chechkin
-* @Last modified time: 2017-01-11T10:57:21+03:00
+* @Last modified time: 2017-01-12T11:28:10+03:00
 */
 
 const DATA = [{
@@ -95,6 +95,13 @@ class Model {
 				return true;
 			}
 		});
+	}
+
+	updateItem(id, data) {
+		const element = this.getItemById(id);
+		for(const idx in data) {
+			element[idx] = data[idx];
+		}
 	}
 }
 
