@@ -6,7 +6,8 @@
   "scripts": {
     "webpack": "./node_modules/.bin/webpack",
     "dev": "./node_modules/.bin/webpack-dev-server  -d --open --watch",
-    "postinstall": "npm run webpack"
+    "production": "./node_modules/.bin/webpack --progress -p",
+    "postinstall": "npm run production"
   },
   "author": "Andrey Chechkin",
   "license": "ISC",
