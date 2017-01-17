@@ -4,14 +4,18 @@
 * @Author: Andrey Chechkin
 * @Date:   2017-01-05T11:45:35+03:00
 * @Email:  andrey.chechkin@me.com
-* @Last modified by:   Andrey Chechkin
-* @Last modified time: 2017-01-12T12:01:28+03:00
+* @Last modified by:   andrey_chechkin
+* @Last modified time: 2017-01-17T22:22:53+03:00
 */
 
-import Model from "./model.js";
-import View from "./view.js";
+import modelClass from "./model.js";
+import viewClass from "./view.js";
 
 const listBook = "#list-book";
+
+//init classes
+const Model = new modelClass();
+const View = new viewClass();
 
 class Controller {
 

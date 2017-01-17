@@ -4,11 +4,11 @@
 * @Author: Andrey Chechkin
 * @Date:   2017-01-05T11:45:43+03:00
 * @Email:  andrey.chechkin@me.com
-* @Last modified by:   Andrey Chechkin
-* @Last modified time: 2017-01-12T11:55:32+03:00
+* @Last modified by:   andrey_chechkin
+* @Last modified time: 2017-01-17T22:33:01+03:00
 */
 
-class View {
+export default class View {
 	generateItem(item) {
 		return `
 			<div class="panel panel-default" data-id="${item.id}">
@@ -53,5 +53,3 @@ class View {
 		}
 	}
 }
-
-export default new View();
